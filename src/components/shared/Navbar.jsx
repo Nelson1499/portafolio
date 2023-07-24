@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
+import { getAuth } from "../../api/api.users";
+import { UserContext } from "../../provider/UserContext";
 
 const Navbar = () => {
+  const { userSessionState, id, token } = useContext(UserContext);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [user, setuser] = useState();
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  useEffect(() => {
+    if (id && token) {
+      getAuth()
+        .then((res) => setuser(res.data))
+        .catch((e) => console.log(e));
+    }
+  }, [userSessionState]);
   return (
     <div className="bg-blue-950 bg-opacity-95 py-2 shadow-sm fixed top-0 w-full z-50 text-white">
       <nav className="font-semibold text-xl transition-shadow duration-300">
@@ -18,11 +30,11 @@ const Navbar = () => {
           </Link>
           <div className="hidden md:flex items-center space-x-4 px-2">
             <Link to="/">
-              <li className="mx-2 cursor-pointer hover:text-blue-500">
+              <li className="mx-4 md:mx-auto cursor-pointer hover:text-blue-500">
                 Inicio
               </li>
             </Link>
-            <Link to="/proyect">
+            <Link to="/project">
               <li className="mx-2 cursor-pointer hover:text-blue-500">
                 Proyectos
               </li>
@@ -30,6 +42,21 @@ const Navbar = () => {
             <Link to="/contact">
               <li className="mx-2 cursor-pointer hover:text-blue-500">
                 Contacto
+              </li>
+            </Link>
+            <Link
+              to={
+                userSessionState || (id && token)
+                  ? "/upload-projects"
+                  : "/login"
+              }
+            >
+              <li className="mx-2 cursor-pointer hover:text-blue-500">
+                {userSessionState || (id && token) ? (
+                  "Subir Proyectos"
+                ) : (
+                  <AccountCircleIcon style={{ fontSize: "36px" }} />
+                )}
               </li>
             </Link>
           </div>
@@ -54,11 +81,26 @@ const Navbar = () => {
             <Link to="/">
               <li className="cursor-pointer hover:text-blue-500">Inicio</li>
             </Link>
-            <Link to="/proyect">
+            <Link to="/project">
               <li className="cursor-pointer hover:text-blue-500">Proyectos</li>
             </Link>
             <Link to="/contact">
               <li className="cursor-pointer hover:text-blue-500">Contacto</li>
+            </Link>
+            <Link
+              to={
+                userSessionState || (id && token)
+                  ? "/upload-projects"
+                  : "/login"
+              }
+            >
+              <li className="mx-2 cursor-pointer hover:text-blue-500">
+                {userSessionState || (id && token) ? (
+                  "Subir Proyectos"
+                ) : (
+                  <AccountCircleIcon style={{ fontSize: "33px" }} />
+                )}
+              </li>
             </Link>
           </ul>
         </div>
