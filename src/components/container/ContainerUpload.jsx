@@ -24,6 +24,7 @@ const ContainerUpload = (props) => {
    */
   const formik = useFormik({
     initialValues: {
+      title: "",
       urlweb: "",
       urlrepository: "",
       description: "",
@@ -31,6 +32,7 @@ const ContainerUpload = (props) => {
       email: "",
     },
     validationSchema: Yup.object({
+      title: Yup.string().required("Por favor, ingresa nombre de su proyecto"),
       urlweb: Yup.string().required(
         "Por favor, ingresa una URL válida de tu sitio web"
       ),
@@ -115,6 +117,18 @@ const ContainerUpload = (props) => {
         </div>
         <h3 className="pb-2 font-semibold text-xl">Upload Projects</h3>
         <form onSubmit={formik.handleSubmit}>
+          <div className="my-2 p-2 border-2 border-white items-center rounded">
+            <input
+              className="w-full bg-transparent border-none m-auto outline-none mx-2"
+              type="text"
+              id="title"
+              placeholder="Nombre del proyecto"
+              {...formik.getFieldProps("title")}
+            />
+            {formik.touched.title && formik.errors.title && (
+              <div className="text-red-500 text-sm">{formik.errors.title}</div>
+            )}
+          </div>
           <div className="my-2 p-2 border-2 border-white items-center rounded">
             <input
               className="w-full bg-transparent border-none m-auto outline-none mx-2"

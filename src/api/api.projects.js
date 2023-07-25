@@ -5,7 +5,7 @@ const apiInstance = axios.create({
 });
 
 export const upload = (data) => {
-  const { images, urlweb, urlrepository, description, email } = data;
+  const { images, urlweb, urlrepository, description, email, title } = data;
   const Id = localStorage.getItem("userId");
   const token = localStorage.getItem("token");
   const headers = {
@@ -17,7 +17,7 @@ export const upload = (data) => {
   images.map((img) => formdata.append("images", img));
   formdata.append(
     "data",
-    JSON.stringify({ urlweb, urlrepository, description, email })
+    JSON.stringify({ urlweb, urlrepository, description, email, title })
   );
   //   console.log(formdata.getAll("data"));
   return apiInstance.post("/project", formdata, { headers });

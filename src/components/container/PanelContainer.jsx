@@ -64,7 +64,7 @@ const PanelContainer = (props) => {
             {pageProjects.projects?.map((project, i) => (
               <tr key={project._id} className="border-b-2 py-2 border-white">
                 <td>{i + 1}</td>
-                <td>Mark</td>
+                <td>{project.title}</td>
                 <td>{project.description.slice(0, 50)}</td>
                 <td className="cursor-pointer">
                   <Tooltip title="Eliminar" placement="right">
