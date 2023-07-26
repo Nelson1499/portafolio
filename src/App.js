@@ -4,7 +4,7 @@ import Routes from "./routes/routes";
 import { UserProvider } from "./provider/UserContext";
 const App = () => {
   return (
-    <Router className="min-h-screen h-max pb-1">
+    <Router basename="/portafolio" className="min-h-screen h-max pb-1">
       <UserProvider>
         <Navbar />
         <Routes />
