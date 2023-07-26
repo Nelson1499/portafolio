@@ -1,7 +1,8 @@
-# Activar el motor de reescritura de URLs
 RewriteEngine On
 
-# Redirigir todas las solicitudes a index.php
+RewriteBase /portafolio/
+
+# Redirigir todas las solicitudes a index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteRule ^(.*)$ index.html [QSA,L]
