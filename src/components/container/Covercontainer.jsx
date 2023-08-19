@@ -18,9 +18,9 @@ const Covercontainer = () => {
                 <ul className="px-2">
                   <li className="m-auto text-lg">Development</li>
                   <li className="flex m-auto">
-                    <p className="text-lg hover:text-blue-600 cursor-pointer">
-                      Curriculum vitae <DownloadIcon onClick={download} />
-                    </p>
+                    <span className="text-lg hover:text-blue-600 cursor-pointer" onClick={download}>
+                      Curriculum vitae <DownloadIcon  />
+                    </span>
                   </li>
                 </ul>
               </li>

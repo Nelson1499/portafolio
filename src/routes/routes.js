@@ -12,7 +12,9 @@ import PrivacyPolicy from "../pages/Privacy-Policy";
 
 const Routes = () => {
   const { userSessionState, id, token } = useContext(UserContext);
-
+  /**
+   * Rutas de la aplicación portafolio
+   */
   return (
     <Switch>
       <Route exact path="/" component={Home} />
