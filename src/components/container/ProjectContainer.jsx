@@ -25,7 +25,7 @@ const ProjectContainer = () => {
     <div className="text-center">
       <h3 className="text-2xl font-bold my-5">Mis proyectos</h3>
       <div className="flex">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mx-auto container">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 mx-auto container">
           {projects.map((item, i) => (
             <div key={i} className="m-auto bg-slate-700 rounded ">
               <div
@@ -33,16 +33,16 @@ const ProjectContainer = () => {
                 onMouseEnter={() => handleMouseEnter(i)}
                 onMouseLeave={handleMouseLeave}
               >
-                <Carousel className="w-80 md:w-full">
+                <Carousel className="w-full">
                   {item.images.map((img, i) => (
                     <Carousel.Item key={i}>
-                      <img src={img.url} alt="project" className="w-80 h-96" />
+                      <img src={img.url} alt="project" className="w-full h-96 rounded-t" />
                     </Carousel.Item>
                   ))}
                 </Carousel>
 
                 {selectedProject === i && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white">
                     <div className="text-center">
                       <a
                         href={item.urlweb}

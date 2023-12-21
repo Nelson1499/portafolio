@@ -9,7 +9,7 @@ const Covercontainer = () => {
     <div className="relative items-center">
       <img className="w-full h-96" src={cover} alt="cover" />
       <div className="absolute inset-x-0 bottom-0 p-1 md:m-auto">
-        <div className="flex p-2 bg-gray-700 bg-opacity-50 rounded md:w-96 w-full ">
+        <div className="flex p-2 bg-black bg-opacity-75 rounded md:w-96 w-full ">
           <img className="w-40 h-40 rounded-full" src={foto} alt="persona" />
           <div className="mx-1 py-10">
             <ul>
@@ -18,9 +18,9 @@ const Covercontainer = () => {
                 <ul className="px-2">
                   <li className="m-auto text-lg">Development</li>
                   <li className="flex m-auto">
-                    <span className="text-lg hover:text-blue-600 cursor-pointer" onClick={download}>
+                    <button className="text-lg active:text-emerald-600" onClick={download}>
                       Curriculum vitae <DownloadIcon  />
-                    </span>
+                    </button>
                   </li>
                 </ul>
               </li>
