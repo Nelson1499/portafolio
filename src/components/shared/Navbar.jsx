@@ -29,7 +29,7 @@ const Navbar = () => {
             <h3 className="text-2xl mx-2">Portafolio</h3>
           </Link>
           <div className="hidden md:flex items-center space-x-4 px-2">
-            <Link to="/">
+            <Link to="/" >
               <li className="mx-4 md:mx-auto cursor-pointer hover:text-blue-500">
                 Inicio
               </li>
@@ -39,7 +39,7 @@ const Navbar = () => {
                 Proyectos
               </li>
             </Link>
-            <Link to="/contact">
+            <Link to="/contact" >
               <li className="mx-2 cursor-pointer hover:text-blue-500">
                 Contacto
               </li>
@@ -79,13 +79,13 @@ const Navbar = () => {
         <div className="md:hidden">
           <ul className="flex flex-col items-center space-y-2 text-white text-xl font-bold">
             <Link to="/">
-              <li className="cursor-pointer hover:text-blue-500">Inicio</li>
+              <li className="cursor-pointer hover:text-blue-500" onClick={toggleMobileMenu}>Inicio</li>
             </Link>
             <Link to="/project">
-              <li className="cursor-pointer hover:text-blue-500">Proyectos</li>
+              <li className="cursor-pointer hover:text-blue-500" onClick={toggleMobileMenu}>Proyectos</li>
             </Link>
             <Link to="/contact">
-              <li className="cursor-pointer hover:text-blue-500">Contacto</li>
+              <li className="cursor-pointer hover:text-blue-500" onClick={toggleMobileMenu}>Contacto</li>
             </Link>
             <Link
               to={
@@ -93,12 +93,13 @@ const Navbar = () => {
                   ? "/upload-projects"
                   : "/login"
               }
+              onClick={toggleMobileMenu}
             >
-              <li className="mx-2 cursor-pointer hover:text-blue-500">
+              <li className="mx-2 cursor-pointer hover:text-blue-500" >
                 {userSessionState || (id && token) ? (
                   "Subir Proyectos"
                 ) : (
-                  <AccountCircleIcon style={{ fontSize: "33px" }} />
+                  <AccountCircleIcon style={{ fontSize: "33px" }}  />
                 )}
               </li>
             </Link>

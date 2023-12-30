@@ -40,7 +40,7 @@ const ProjectContainer = () => {
             title="loading"
           />
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 mx-auto container">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 mx-auto container transition-all">
             {projects.map((item, i) => (
               <div key={i} className="m-auto bg-slate-700 rounded ">
                 <div

@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    /* @apply bg-blue-500; */
-    @apply bg-blue-950;
-    @apply text-white;
-    @apply font-semibold;
-
+  /* @apply bg-blue-500; */
+  @apply bg-blue-950;
+  @apply text-white;
+  @apply font-semibold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
