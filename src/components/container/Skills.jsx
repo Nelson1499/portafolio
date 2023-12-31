@@ -1,21 +1,68 @@
 import React from "react";
-import { BiLogoReact, BiLogoJavascript, BiLogoCss3, BiLogoTailwindCss, BiLogoHtml5 } from "react-icons/bi";
+import {
+  BiLogoReact,
+  BiLogoJavascript,
+  BiLogoCss3,
+  BiLogoTailwindCss,
+  BiLogoHtml5,
+  BiLogoNodejs,
+  BiLogoTypescript,
+  BiLogoMongodb,
+} from "react-icons/bi";
+import { TbBrandNextjs, TbBrandSupabase } from "react-icons/tb";
 import { BsGit } from "react-icons/bs";
-
 
 const Skills = () => {
   return (
-    <div className="text-center">
+    <div className="text-center items-center">
       <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2">
         <h3 className="text-2xl font-bold m-auto">Habilidades</h3>
       </div>
-      <div className="text-5xl items-center flex py-5">
-        <BiLogoReact className="m-auto" />
-        <BsGit className="m-auto" />
-        <BiLogoJavascript className="m-auto" />
-        <BiLogoCss3 className="m-auto" />
-        <BiLogoTailwindCss className="m-auto" />
-        <BiLogoHtml5 className="m-auto" />
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 w-11/12 md:w-9/12 m-auto my-2">
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoReact className="m-auto" size={50} />
+          <figcaption>React</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BsGit className="m-auto" size={50} />
+          <figcaption>Git</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoJavascript className="m-auto" size={50} />
+          <figcaption>JavaScript</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoCss3 className="m-auto" size={50} />
+          <figcaption>CSS</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoTailwindCss className="m-auto" size={50} />
+          <figcaption>Tailwindcss</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoHtml5 className="m-auto" size={50} />
+          <figcaption>HTML</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoNodejs className="m-auto" size={50} />
+          <figcaption>Nodejs</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <TbBrandNextjs className="m-auto" size={50} />
+          <figcaption>Nextjs</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoTypescript className="m-auto" size={50} />
+          <figcaption>Typescript</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <TbBrandSupabase className="m-auto" size={50} />
+          <figcaption>Supabase</figcaption>
+        </figure>
+        <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
+          <BiLogoMongodb className="m-auto" size={50} />
+          <figcaption>Mongodb</figcaption>
+        </figure>
       </div>
     </div>
   );
