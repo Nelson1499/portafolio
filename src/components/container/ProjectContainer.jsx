@@ -40,7 +40,7 @@ const ProjectContainer = () => {
             title="loading"
           />
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 mx-auto container transition-all">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 mx-auto container transition-all">
             {projects.map((item, i) => (
               <div key={i} className="m-auto bg-slate-700 rounded ">
                 <div
@@ -48,17 +48,16 @@ const ProjectContainer = () => {
                   onMouseEnter={() => handleMouseEnter(i)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <Carousel className="w-full">
+                  <section className="w-full">
                     {item.images.map((img, i) => (
-                      <Carousel.Item key={i}>
-                        <img
-                          src={img.url}
-                          alt="project"
-                          className="w-full h-96 rounded-t"
-                        />
-                      </Carousel.Item>
+                      <img
+                        key={i}
+                        src={img.url}
+                        alt="project"
+                        className="w-full h-52 rounded-t"
+                      />
                     ))}
-                  </Carousel>
+                  </section>
 
                   {selectedProject === i && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white">
