@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .hiddenprofile{
-  @apply transition-all duration-700 ease-in-out transform -translate-x-full;
+  @apply transition-all duration-700 ease-linear transform -translate-x-full;
 }
 .showprofile{
-  @apply transition-all duration-700 ease-in-out transform translate-x-0 opacity-100 m-1;
+  @apply transition-all duration-700 ease-linear transform translate-x-0 opacity-100 m-1;
 }

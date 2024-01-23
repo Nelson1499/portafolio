@@ -4,12 +4,15 @@ import FormularionContact from "../components/container/FormularionContact";
 
 const Contact = () => {
   return (
-    <div className="mt-20 md:m-auto items-center md:flex md:min-h-screen">
-      <div className="m-auto md:flex">
+    <article id="contact" className="my-2">
+      <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2 text-center">
+        <h3 className="text-2xl font-bold m-auto">Contactos</h3>
+      </div>
+      <section className="mt-2 md:flex">
         <Contactcontainer />
         <FormularionContact />
-      </div>
-    </div>
+      </section>
+    </article>
   );
 };
 

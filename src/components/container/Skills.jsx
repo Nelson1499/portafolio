@@ -14,11 +14,11 @@ import { BsGit } from "react-icons/bs";
 
 const Skills = () => {
   return (
-    <div className="text-center items-center">
+    <div id="skills" className="text-center items-center">
       <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2">
-        <h3 className="text-2xl font-bold m-auto">Habilidades</h3>
+        <h2 className="text-2xl font-bold m-auto">Habilidades</h2>
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 w-11/12 md:w-9/12 m-auto my-2">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 w-11/12 m-auto my-2">
         <figure className="m-auto bg-slate-500 bg-opacity-25 rounded p-2 w-full items-center">
           <BiLogoReact className="m-auto" size={50} />
           <figcaption>React</figcaption>

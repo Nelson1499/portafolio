@@ -1,105 +1,96 @@
-import { useEffect, useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { getProjects } from "../../api/api.projects";
-import Carousel from "react-bootstrap/Carousel";
-import LoadingGif from "../../assets/loading.gif";
+import WebIcon from "@mui/icons-material/Web";
+import { Projectsdata as projects } from "../../data/projects";
+import { useState } from "react";
 
 const ProjectContainer = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [projects, setprojects] = useState([]);
-  const [loading, setloading] = useState(true);
-
   const handleMouseEnter = (index) => {
     setSelectedProject(index);
   };
   const handleMouseLeave = () => {
     setSelectedProject(null);
   };
-  const projectsdata = () => {
-    getProjects()
-      .then((res) => {
-        setprojects(res.data);
-        setTimeout(() => {
-          setloading(false);
-        }, 2000);
-      })
-      .catch((e) => console.log(e));
-  };
-  useEffect(() => {
-    projectsdata();
-  }, []);
   return (
-    <div className="text-center">
-      <h3 className="text-2xl font-bold my-5">Mis proyectos</h3>
-      <div className="flex">
-        {loading ? (
-          <img
-            src={LoadingGif}
-            className="m-auto w-80"
-            alt="loading"
-            title="loading"
-          />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 mx-auto container transition-all">
-            {projects.map((item, i) => (
-              <div key={i} className="m-auto bg-slate-700 rounded ">
-                <div
-                  className="relative"
-                  onMouseEnter={() => handleMouseEnter(i)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <section className="w-full">
-                    {item.images.map((img, i) => (
-                      <img
-                        key={i}
-                        src={img.url}
-                        alt="project"
-                        className="w-full h-52 rounded-t"
-                      />
-                    ))}
-                  </section>
-
-                  {selectedProject === i && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white">
-                      <div className="text-center">
-                        <a
-                          href={item.urlweb}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xl font-bold hover:text-blue-500"
-                        >
-                          Ir a la página
-                        </a>
-                        <div className="mt-10 px-3">
-                          <h4>Descripción</h4>
-                          <div className="text-center w-11/12 mx-2">
-                            {item.description}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
+    <article id="project" className="space-y-4 my-2">
+      <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2 text-center">
+        <h2 className="text-2xl font-bold m-auto">Proyectos</h2>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mx-auto transition-all">
+        {projects.map((item, i) => (
+          <div
+            key={i}
+            className="m-auto rounded"
+            onMouseEnter={() => handleMouseEnter(i)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <section className="flex gap-2 mb-2">
+              {item?.Frameworks.map((f, i) => (
+                <span key={i} className="flex bg-slate-700 p-2 rounded">
+                  <p>{f.Framework}</p>
+                  <f.icon />
+                </span>
+              ))}
+            </section>
+            <div className="relative cursor-pointer">
+              <section className="">
+                <img
+                  key={i}
+                  src={item.Imagen}
+                  alt="project"
+                  className="w-full h-64 rounded-t"
+                />
+                {selectedProject === i && (
+                  <div className="absolute top-0 bottom-0 w-full items-center text-center bg-black bg-opacity-75 space-y-3">
+                    <h3 className="mt-5"> {item.Title} </h3>
+                    <p>{item.Description}</p>
+                  </div>
+                )}
+              </section>
+            </div>
+            <section
+              className={`grid ${
+                item.Repository ? "grid-cols-2" : "grid-cols-1"
+              }`}
+            >
+              {item.Repository && (
                 <a
-                  href={item.urlrepository}
+                  href={item.Repository}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xl font-bold"
                 >
                   <div
                     title="Ir al repositorio de github."
-                    className="m-0 left-0 right-0 bottom-0 py-4 flex items-center justify-center hover:bg-slate-800"
+                    className="py-4 flex items-center justify-center bg-black rounded-bl hover:scale-105"
                   >
-                    <GitHubIcon /> Github
+                    <span>
+                      <GitHubIcon />
+                      Github
+                    </span>
                   </div>
                 </a>
-              </div>
-            ))}
+              )}
+              <a
+                href={item.Url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-bold"
+              >
+                <div
+                  title="Ir al sitio web."
+                  className={`m-0 left-0 right-0 bottom-0 py-4 flex items-center justify-center  ${
+                    item.Repository ? "rounded-br" : "rounded-b"
+                  } bg-slate-700 hover:scale-105`}
+                >
+                  <WebIcon /> Ir al sitio web
+                </div>
+              </a>
+            </section>
           </div>
-        )}
+        ))}
       </div>
-    </div>
+    </article>
   );
 };
 

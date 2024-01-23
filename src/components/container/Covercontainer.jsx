@@ -6,23 +6,13 @@ import foto from "../../assets/foto-cv.jpeg";
 import "../../css/covercontainer.css";
 
 const Covercontainer = () => {
-  const [show, setshow] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setshow(true);
-    }, 1000);
-  }, []);
   return (
     <div className="relative items-center">
       <img className="w-full h-96" src={cover} alt="cover" />
-      <div
-        className={`absolute inset-x-0 bottom-0 items-center md:items-start  ${
-          show ? "showprofile" : "hiddenprofile"
-        }`}
-      >
-        <div className="flex bg-black bg-opacity-75 p-3 rounded w-full md:w-80 shadow-md shadow-gray-500 justify-center">
-          <div className="w-80 flex">
-            <figure className="w-max mr-2 m-auto">
+      <div className={"absolute bottom-2 justify-center items-center w-full"}>
+        <div className="flex bg-black bg-opacity-75 p-3 m-auto rounded w-max justify-center">
+          <div className="w-80 flex m-auto justify-center items-center">
+            <figure className="w-max m-auto">
               <img
                 className="w-28 h-28 rounded m-auto"
                 src={foto}
@@ -37,7 +27,7 @@ const Covercontainer = () => {
                     <li className="m-auto text-lg">Development</li>
                     <li className="flex m-auto">
                       <button
-                        className="text-lg active:text-emerald-600"
+                        className="text-lg active:text-emerald-600 hover:scale-105"
                         onClick={download}
                       >
                         Curriculum vitae <DownloadIcon />

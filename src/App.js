@@ -1,15 +1,15 @@
 import Navbar from "./components/shared/Navbar";
-import { HashRouter as Router } from "react-router-dom";
-import Routes from "./routes/routes";
-import { UserProvider } from "./provider/UserContext";
+import Home from "./pages/Home";
 const App = () => {
   return (
-    <Router className="min-h-screen h-max pb-1">
-      <UserProvider>
+    <section className="w-full md:w-[800px] m-auto">
+      <div className="w-full flex  justify-center">
         <Navbar />
-        <Routes />
-      </UserProvider>
-    </Router>
+      </div>
+      <main className="justify-center items-center">
+        <Home />
+      </main>
+    </section>
   );
 };
 
