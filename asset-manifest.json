@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/portafolio/static/css/main.c2e264f7.css",
-    "main.js": "/portafolio/static/js/main.756abc23.js",
-    "static/media/foto-cv.jpeg": "/portafolio/static/media/foto-cv.91846e9ad2ddab15e285.jpeg",
-    "static/media/loading.gif": "/portafolio/static/media/loading.f01f501d58c848295e6c.gif",
+    "main.css": "/portafolio/static/css/main.e6b9c128.css",
+    "main.js": "/portafolio/static/js/main.4769f964.js",
+    "static/media/foto-cv.jpeg": "/portafolio/static/media/foto-cv.89e3817d7abfbc4dcf11.jpeg",
+    "static/media/birdsocial.jpg": "/portafolio/static/media/birdsocial.3b088cd23e03145b604a.jpg",
+    "static/media/shopping.jpg": "/portafolio/static/media/shopping.823e3d28db32ae3cd1c2.jpg",
     "static/media/portada.jpg": "/portafolio/static/media/portada.02abf4404bf695dba5dd.jpg",
     "index.html": "/portafolio/index.html",
-    "main.c2e264f7.css.map": "/portafolio/static/css/main.c2e264f7.css.map",
-    "main.756abc23.js.map": "/portafolio/static/js/main.756abc23.js.map"
+    "main.e6b9c128.css.map": "/portafolio/static/css/main.e6b9c128.css.map",
+    "main.4769f964.js.map": "/portafolio/static/js/main.4769f964.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2e264f7.css",
-    "static/js/main.756abc23.js"
+    "static/css/main.e6b9c128.css",
+    "static/js/main.4769f964.js"
   ]
 }
