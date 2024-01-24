@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portafolio/static/css/main.56ec6a56.css",
-    "main.js": "/portafolio/static/js/main.e8799dc7.js",
+    "main.js": "/portafolio/static/js/main.fb58433f.js",
     "static/media/foto-cv.jpeg": "/portafolio/static/media/foto-cv.89e3817d7abfbc4dcf11.jpeg",
     "static/media/birdsocial.jpg": "/portafolio/static/media/birdsocial.3b088cd23e03145b604a.jpg",
     "static/media/shopping.jpg": "/portafolio/static/media/shopping.823e3d28db32ae3cd1c2.jpg",
     "static/media/portada.jpg": "/portafolio/static/media/portada.02abf4404bf695dba5dd.jpg",
     "index.html": "/portafolio/index.html",
     "main.56ec6a56.css.map": "/portafolio/static/css/main.56ec6a56.css.map",
-    "main.e8799dc7.js.map": "/portafolio/static/js/main.e8799dc7.js.map"
+    "main.fb58433f.js.map": "/portafolio/static/js/main.fb58433f.js.map"
   },
   "entrypoints": [
     "static/css/main.56ec6a56.css",
-    "static/js/main.e8799dc7.js"
+    "static/js/main.fb58433f.js"
   ]
 }
