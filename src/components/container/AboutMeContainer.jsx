@@ -7,9 +7,9 @@ const AboutMeContainer = () => {
       <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2 text-center">
         <h3 className="text-2xl font-bold m-auto">Sobre mí</h3>
       </div>
-      <section className="text-xl m-auto my-2 flex">
-        <div className="space-y-2 break-words">
-          <p>
+      <section className="text-xl m-auto my-2 w-11/12 items-center flex-col-reverse flex">
+        <article className="space-y-2 break-words text-pretty">
+          <p c>
             Soy un desarrollador full-stack junior apasionado por crear
             experiencias web atractivas y seguras. Sé construir interfaces
             funcionales y responsivas, desarrollar y asegurar APIs robustas, y
@@ -25,8 +25,8 @@ const AboutMeContainer = () => {
             Estoy listo para unirme a un equipo dinámico y contribuir en el
             desarrollo de proyectos web innovadores.
           </p>
-        </div>
-        <img src={perfil} alt="perfil" className="w-64 h-64 rounded-full object-cover" />
+        </article>
+        <img src={perfil} alt="perfil" className="w-64 h-64 rounded-full object-cover m-auto" />
       </section>
     </div>
   );

@@ -20,7 +20,7 @@ const ProjectContainer = () => {
         {projects.map((item, i) => (
           <div
             key={i}
-            className="m-auto rounded"
+            className="mx-2 rounded"
             onMouseEnter={() => handleMouseEnter(i)}
             onMouseLeave={handleMouseLeave}
           >
@@ -33,7 +33,7 @@ const ProjectContainer = () => {
               ))}
             </section>
             <div className="relative cursor-pointer">
-              <section className="">
+              <section >
                 <img
                   key={i}
                   src={item.Imagen}
