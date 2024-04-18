@@ -12,7 +12,7 @@ export const download = async () => {
 
       const enlaceDescarga = document.createElement("a");
       enlaceDescarga.href = urlArchivo;
-      enlaceDescarga.download = "CV";
+      enlaceDescarga.download = "CV-NelsonAvalos";
 
       enlaceDescarga.click();
 
