@@ -16,11 +16,11 @@ const ProjectContainer = () => {
       <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2 text-center">
         <h2 className="text-2xl font-bold m-auto">Proyectos</h2>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mx-auto transition-all">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mx-auto transition-all justify-center items-center">
         {projects.map((item, i) => (
           <div
             key={i}
-            className="mx-2 rounded"
+            className="m-auto rounded max-w-md"
             onMouseEnter={() => handleMouseEnter(i)}
             onMouseLeave={handleMouseLeave}
           >
