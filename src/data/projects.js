@@ -1,5 +1,6 @@
 import shopping from "../images/shopping.jpg";
 import birdsocial from "../images/birdsocial.jpg";
+import shorturl from "../images/short-url.jpg";
 import {
   BiLogoReact,
   BiLogoJavascript,
@@ -9,6 +10,7 @@ import {
   BiLogoNodejs,
   BiLogoTypescript,
   BiLogoMongodb,
+  BiLogoPostgresql
 } from "react-icons/bi";
 import { TbBrandNextjs, TbBrandSupabase } from "react-icons/tb";
 import { BsGit } from "react-icons/bs";
@@ -20,16 +22,19 @@ export const Projectsdata = [
     Repository: "https://github.com/Nelson1499/birdsocial",
     Description: "Clon de twitter con algunas cosa diferentes",
     Imagen: birdsocial,
-    Frameworks: [
+    webTech: [
       {
-        Framework: "Nextjs",
+        tech: "Nextjs",
         icon: TbBrandNextjs
       },
       {
-        Framework: "Tailwindcss",
+        tech: "Tailwindcss",
         icon: BiLogoTailwindCss
       },
-
+      {
+        tech: "Supabase",
+        icon: TbBrandSupabase
+      },
     ],
   },
   {
@@ -38,15 +43,36 @@ export const Projectsdata = [
     Repository: "https://github.com/Nelson1499/my-app-shopping",
     Description: "Tienda online",
     Imagen: shopping,
-    Frameworks: [
+    webTech: [
       {
-        Framework: "Tailwindcss",
+        tech: "Tailwindcss",
         icon: BiLogoTailwindCss,
       },
       {
-        Framework: "React",
+        tech: "React",
         icon: BiLogoReact,
       },
+    ],
+  },
+  {
+    Title: "short url",
+    Url: "https://acortador-url-xi.vercel.app/",
+    Repository: "https://github.com/Nelson1499/acortador-url",
+    Description: "Acortar Urls",
+    Imagen: shorturl,
+    webTech: [
+      {
+        tech: "Nextjs",
+        icon: TbBrandNextjs
+      },
+      {
+        tech: "Css",
+        icon: BiLogoCss3,
+      },
+      {
+        tech: "Postgresql",
+        icon: BiLogoPostgresql
+      }
     ],
   },
 ];

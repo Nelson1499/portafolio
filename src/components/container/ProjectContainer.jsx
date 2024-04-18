@@ -25,9 +25,9 @@ const ProjectContainer = () => {
             onMouseLeave={handleMouseLeave}
           >
             <section className="flex gap-2 mb-2">
-              {item?.Frameworks.map((f, i) => (
+              {item?.webTech.map((f, i) => (
                 <span key={i} className="flex bg-slate-700 p-2 rounded">
-                  <p>{f.Framework}</p>
+                  <p>{f.tech}</p>
                   <f.icon />
                 </span>
               ))}

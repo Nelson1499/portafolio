@@ -8,9 +8,11 @@ const Contact = () => {
       <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2 text-center">
         <h3 className="text-2xl font-bold m-auto">Contactos</h3>
       </div>
-      <section className="mt-2 md:flex">
-        <Contactcontainer />
-        <FormularionContact />
+      <section className="mt-2 w-full items-center justify-center">
+        <div className="m-auto w-max md:flex">
+          <Contactcontainer />
+          <FormularionContact />
+        </div>
       </section>
     </article>
   );
