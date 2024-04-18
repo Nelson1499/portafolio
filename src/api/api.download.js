@@ -1,7 +1,7 @@
 import axios from "axios";
 export const download = async () => {
   const url = process.env.REACT_APP_URL_DOWNLOAD;
-  // const url = "http://localhost:8000/pdf/avalos-nelson.dotx";
+  // const url = "http://localhost:8000/pdf/cv-dev-nelson.pdf";
 
   try {
     const response = await axios.get(url, {

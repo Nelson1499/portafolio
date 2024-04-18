@@ -20,7 +20,7 @@ export const Projectsdata = [
     Title: "Birdsocial",
     Url: "http://birdsocial.vercel.app/",
     Repository: "https://github.com/Nelson1499/birdsocial",
-    Description: "Clon de twitter con algunas cosa diferentes",
+    Description: "Es una demo microblogging estilo X (anteriormente llamado Twitter) en la cual puedes postear, likear post y comentarios, interactuar mediante comentarios y enviando mensajes.",
     Imagen: birdsocial,
     webTech: [
       {
@@ -41,7 +41,7 @@ export const Projectsdata = [
     Title: "Shopping",
     Url: "https://nelson1499.github.io/my-app-shopping/#/",
     Repository: "https://github.com/Nelson1499/my-app-shopping",
-    Description: "Tienda online",
+    Description: "Es una demo de tienda online en la cual puede agregar productos a tu canasta y puedes pagar tus productos con Stripe.",
     Imagen: shopping,
     webTech: [
       {
@@ -58,7 +58,7 @@ export const Projectsdata = [
     Title: "short url",
     Url: "https://acortador-url-xi.vercel.app/",
     Repository: "https://github.com/Nelson1499/acortador-url",
-    Description: "Acortar Urls",
+    Description: "Pagina web para acortar urls de muchos caracteres.",
     Imagen: shorturl,
     webTech: [
       {
