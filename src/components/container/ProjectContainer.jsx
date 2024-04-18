@@ -20,7 +20,7 @@ const ProjectContainer = () => {
         {projects.map((item, i) => (
           <div
             key={i}
-            className="m-auto rounded max-w-md"
+            className="m-auto rounded max-w-sm md:max-w-md"
             onMouseEnter={() => handleMouseEnter(i)}
             onMouseLeave={handleMouseLeave}
           >
