@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/portafolio/static/css/main.ae135e7a.css",
-    "main.js": "/portafolio/static/js/main.3842321d.js",
-    "static/media/foto-cv.jpeg": "/portafolio/static/media/foto-cv.89e3817d7abfbc4dcf11.jpeg",
+    "main.js": "/portafolio/static/js/main.40967b6b.js",
     "static/media/shopping.jpg": "/portafolio/static/media/shopping.8630926d635345cc18d8.jpg",
+    "static/media/foto-cv.webp": "/portafolio/static/media/foto-cv.1cdb514c1acd5e50fa7e.webp",
     "static/media/birdsocial.jpg": "/portafolio/static/media/birdsocial.54a695d9277fc3346914.jpg",
     "static/media/short-url.jpg": "/portafolio/static/media/short-url.4d354f3dd70594ce5863.jpg",
     "static/media/portada.jpg": "/portafolio/static/media/portada.02abf4404bf695dba5dd.jpg",
     "index.html": "/portafolio/index.html",
     "main.ae135e7a.css.map": "/portafolio/static/css/main.ae135e7a.css.map",
-    "main.3842321d.js.map": "/portafolio/static/js/main.3842321d.js.map"
+    "main.40967b6b.js.map": "/portafolio/static/js/main.40967b6b.js.map"
   },
   "entrypoints": [
     "static/css/main.ae135e7a.css",
-    "static/js/main.3842321d.js"
+    "static/js/main.40967b6b.js"
   ]
 }
