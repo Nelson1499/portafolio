@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import cover from "../../assets/portada.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import { download } from "../../api/api.download";
-import foto from "../../assets/foto-cv.jpeg";
+import foto from "../../assets/foto-cv.webp";
 import "../../css/covercontainer.css";
 
 const Covercontainer = () => {

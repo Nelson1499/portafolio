@@ -1,5 +1,5 @@
 import React from "react";
-import perfil from "../../assets/foto-cv.jpeg";
+import perfil from "../../assets/foto-cv.webp";
 
 const AboutMeContainer = () => {
   return (
