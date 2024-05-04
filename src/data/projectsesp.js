@@ -3,19 +3,14 @@ import birdsocial from "../images/birdsocial.jpg";
 import shorturl from "../images/short-url.jpg";
 import {
   BiLogoReact,
-  BiLogoJavascript,
   BiLogoCss3,
   BiLogoTailwindCss,
-  BiLogoHtml5,
-  BiLogoNodejs,
-  BiLogoTypescript,
-  BiLogoMongodb,
   BiLogoPostgresql
 } from "react-icons/bi";
 import { TbBrandNextjs, TbBrandSupabase } from "react-icons/tb";
 import { BsGit } from "react-icons/bs";
 
-export const Projectsdata = [
+export const ProjectsdataEsp = [
   {
     Title: "Birdsocial",
     Url: "http://birdsocial.vercel.app/",

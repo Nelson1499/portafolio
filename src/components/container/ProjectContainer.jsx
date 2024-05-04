@@ -1,7 +1,8 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WebIcon from "@mui/icons-material/Web";
-import { Projectsdata as projects } from "../../data/projects";
+// import { Projectsdata as projects } from "../../data/projects";
 import { useState } from "react";
+import { useMiContexto } from "../../context/contextlanguaje";
 
 const ProjectContainer = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -11,10 +12,11 @@ const ProjectContainer = () => {
   const handleMouseLeave = () => {
     setSelectedProject(null);
   };
+  const { strings: { projects, hproject } } = useMiContexto();
   return (
     <article id="project" className="space-y-4 my-2">
       <div className="bg-black shadow-white shadow-sm bg-opacity-10 py-2 text-center">
-        <h2 className="text-2xl font-bold m-auto">Proyectos</h2>
+        <h2 className="text-2xl font-bold m-auto">{hproject}</h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mx-auto transition-all justify-center items-center">
         {projects.map((item, i) => (

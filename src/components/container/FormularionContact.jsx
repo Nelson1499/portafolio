@@ -2,7 +2,8 @@ import { postForm } from "../../api/api";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-const FormularionContact = () => {
+const FormularionContact = ({form}) => {
+  const { title, send ,errors: { email, emailrequired, name, message }, placeholdernames: { pname, pmail, pmessage } } = form;
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -11,10 +12,10 @@ const FormularionContact = () => {
     },
     validationSchema: Yup.object({
       email: Yup.string()
-        .email("Por favor, ingresa un correo electrónico válido")
-        .required("Por favor, ingresa un correo electrónico"),
-      name: Yup.string().required("Por favor, ingresa tu nombre"),
-      message: Yup.string().required("Por favor, ingresa un mensaje"),
+        .email(email)
+        .required(emailrequired),
+      name: Yup.string().required(name),
+      message: Yup.string().required(message),
     }),
     onSubmit: (values, { resetForm }) => {
       postForm(values);
@@ -26,12 +27,12 @@ const FormularionContact = () => {
       onSubmit={formik.handleSubmit}
       className="bg-gray-500 bg-opacity-20 block w-11/12 md:w-96 py-2 px-5 items-center m-auto"
     >
-      <h3 className="text-xl">Formulario de contacto.</h3>
+      <h3 className="text-xl">{title}</h3>
       <div className="m-auto">
         <div className="border-2 border-white p-2 my-2 rounded">
           <input
             type="text"
-            placeholder="Nombre"
+            placeholder={pname}
             className="bg-transparent outline-none"
             id="name"
             name="name"
@@ -44,7 +45,7 @@ const FormularionContact = () => {
         <div className="border-2 border-white p-2 my-2 rounded">
           <input
             type="email"
-            placeholder="Email"
+            placeholder={pmail}
             className="bg-transparent outline-none"
             id="email"
             name="email"
@@ -56,7 +57,7 @@ const FormularionContact = () => {
         </div>
         <div className="border-2 border-white p-2 my-2 rounded">
           <textarea
-            placeholder="Mensaje"
+            placeholder={pmessage}
             className="bg-transparent outline-none min-h-48 max-h-48 w-full"
             id="message"
             name="message"
@@ -70,7 +71,7 @@ const FormularionContact = () => {
           type="submit"
           className="border-2 border-white text-black bg-slate-50 hover:bg-slate-200 p-2 my-2 rounded w-full"
         >
-          Enviar
+          {send}
         </button>
       </div>
     </form>
