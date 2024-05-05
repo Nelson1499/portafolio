@@ -4,8 +4,10 @@ import DownloadIcon from "@mui/icons-material/Download";
 import { download } from "../../api/api.download";
 import foto from "../../assets/foto-cv.webp";
 import "../../css/covercontainer.css";
+import { useMiContexto } from "../../context/contextlanguaje";
 
 const Covercontainer = () => {
+  const { language } = useMiContexto();
   return (
     <div className="relative items-center">
       <img className="w-full h-96" src={cover} alt="cover" />
@@ -28,7 +30,9 @@ const Covercontainer = () => {
                     <li className="flex m-auto">
                       <button
                         className="text-lg active:text-emerald-600 hover:scale-105"
-                        onClick={download}
+                        onClick={() => {
+                          download(language);
+                        }}
                       >
                         Curriculum vitae <DownloadIcon />
                       </button>

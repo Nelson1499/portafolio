@@ -1,11 +1,18 @@
 import axios from "axios";
-export const download = async () => {
-  const url = process.env.REACT_APP_URL_DOWNLOAD;
-
+export const download = async (language) => {
+  const url = process.env.REACT_APP_URL_DOWNLOAD_ESP;
+  const url_eng = process.env.REACT_APP_URL_DOWNLOAD_ENG;
   try {
-    const response = await axios.get(url, {
-      responseType: "blob",
-    });
+    let response;
+    if (language === "es") {
+      response = await axios.get(url, {
+        responseType: "blob",
+      });
+    } else {
+      response = await axios.get(url_eng, {
+        responseType: "blob",
+      });
+    }
 
     if (response.status === 200) {
       const urlArchivo = window.URL.createObjectURL(response.data);
